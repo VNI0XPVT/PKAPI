@@ -2,10 +2,10 @@
   "version": 2,
   "functions": {
     "api/lookup.py": {
-      "runtime": "@vercel/python@3.10"
+      "runtime": "vercel-python@3.9"
     }
   },
   "routes": [
-    { "src": "/api/lookup", "dest": "/api/lookup.py" }
+    { "src": "/api/(.*)", "dest": "/api/lookup.py" }
   ]
 }
